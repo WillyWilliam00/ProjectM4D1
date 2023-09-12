@@ -81,3 +81,61 @@ const CheckAngle = (gradi) => {
 
 // OTTAVO ESERCIZIO 
 
+const Acronimo = (frase) => {
+    
+    let Arrayfrase = frase.split(" ")
+    let acronimo = ""
+    for (let i = 0; i < Arrayfrase.length; i++) {
+        
+        let PrimaLettera = Arrayfrase[i].split("").slice(0, 1)
+        
+        acronimo = acronimo + PrimaLettera
+    }
+    
+    return acronimo.toUpperCase()
+}
+
+// ESERCIZI EXTRA   
+
+// PRIMO ESERCIZIO 
+
+const CaratterePiuUsato = (frase) => {
+
+
+}
+
+// SECONDO ESERCIZIO
+// USO SORT() LA QUALE METTE IN ORDINE ALFABETICO UN ARRAY, NEL CASO LE DUE PAROLE, 
+// UNA VOLTA CHE LE LETTERE VENGONO ORDINATE ALFABETICAMENTE, SIANO UGUALI ALLORA SONO ANAGRAMMI
+
+const Anagramma = (parola1, parola2) => {
+    let parola1lower = parola1.toLowerCase()
+    let parola2lower = parola2.toLowerCase()
+
+    if (parola1lower.split("").sort().join() === parola2lower.split("").sort().join() ) {
+        return true 
+    } else {
+        return false
+    }
+}
+
+
+// TERZO ESERCIZIO 
+
+const ArrayAnagrammi = (ListaAnagrammi, parola) => {
+
+    
+
+    for (let i = 0; i < ListaAnagrammi.length; i++) {
+        
+        if (parola.split("").sort().join() ==! ListaAnagrammi[i].split("").sort().join() ) {
+            
+            ListaAnagrammi.splice(i, 1)
+        } 
+        
+    }
+    return ListaAnagrammi
+
+}
+
+console.log(ArrayAnagrammi(["carenti", "incerta", "espatrio"], "cartine" ))

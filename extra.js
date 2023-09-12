@@ -25,6 +25,8 @@ const anagrammi = (str1, str2) => {
   return str1.split("").sort().join() == str2.split("").sort().join()
 }
 
+
+
 // 3. Partendo da una lista di possibili anagrammi e da una parola (entrambi passati come parametri),
 //ritorna un nuovo array contenente tutti gli anagrammi corretti della parola data.
 // Per esempio, partendo da “cartine” e [”carenti”, “incerta”, “espatrio”], il valore ritornato deve essere [”carenti”, “incerta”].
