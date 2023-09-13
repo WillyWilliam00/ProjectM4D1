@@ -158,3 +158,96 @@ const TestPalindromo = (parola) => {
     
     
 }
+
+//  QUINTO ESERCIZIO    
+
+const InvertiNumero = (num) => {
+    
+    let str = num.toString()
+    let strInverse = str.split("").reverse("").join("")
+    
+    
+    return parseInt(strInverse)
+}
+
+// SESTO ESERCIZIO  
+
+const scalino = (x) => {
+
+    y = " "
+
+    for (let i = 0; i < x; i++) {
+        
+        console.log(y = "#" + y)
+        
+    }
+
+
+}
+
+// SETTIMO ESERCIZIO 
+
+const Reverse = (str) => {
+
+    let StrReverse = str.split("").reverse().join("")
+
+    return StrReverse
+}
+
+// OTTAVO ESERCIZIO
+
+const SottoArray = (arr, number) => {
+    
+    let SottArray = [ ]
+    
+    // if (arr.length === number){
+    //     SottoArray.push(arr)
+    //     return SottoArray
+    // } else if (arr.length < number) {
+    //     return "il numero è più alto della lunghezza dell'array"
+    // }  else if (arr.length > number){
+        for (let i = 0; i < arr.length; i += number) {
+
+
+            const chunk = arr.slice(i, i + number);
+            chunks.push(chunk);
+            
+        }
+        
+        
+    //}
+   
+    
+    
+     
+   
+}
+
+console.log(SottoArray([5, 4, 3, 7, 8, 4], 1))
+
+// NONO ESERCIZIO
+
+const piramide = (x) => {
+
+    let cancelletto = " "
+    let SpazioVuoto = " "
+    
+    for (let i = 0; i < x; i++) {
+        
+        cancelletto = "#" + cancelletto // creo le righe di cancelletti 
+
+        if (i % 2 === 0) { // se i è pari allora stampa la riga di cancelletti (la riga di cancelletti è dispari così è sempre centrata)
+
+            if (i === 0) { // primo cancelletto (la punta)
+            console.log(SpazioVuoto.repeat(x) + cancelletto ) //do spazio al primo #  facendolo ripetere tante volte quanto è valore di x in modo tale che ci sia la punta
+            } else {
+                x = x - 1 //lo spazio è sempre x - 1 in modo tale che la righa sotto sia sempre centrata 
+                console.log(SpazioVuoto.repeat(x) + cancelletto ) 
+            }
+            
+        }
+    }
+
+
+}
+
