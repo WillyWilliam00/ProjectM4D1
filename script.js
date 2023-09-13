@@ -125,17 +125,36 @@ const Anagramma = (parola1, parola2) => {
 const ArrayAnagrammi = (ListaAnagrammi, parola) => {
 
     
+    let ArrayAnagrammi = []
+    
 
-    for (let i = 0; i < ListaAnagrammi.length; i++) {
-        
-        if (parola.split("").sort().join() ==! ListaAnagrammi[i].split("").sort().join() ) {
+     for (let i = 0; i < ListaAnagrammi.length; i++) {
+
+        if (parola.split("").sort().join() === ListaAnagrammi[i].split("").sort().join()) {
             
-            ListaAnagrammi.splice(i, 1)
-        } 
-        
-    }
-    return ListaAnagrammi
-
+            ArrayAnagrammi.push(ListaAnagrammi[i])
+        }
+ 
+     }
+    
+     return ArrayAnagrammi
 }
 
-console.log(ArrayAnagrammi(["carenti", "incerta", "espatrio"], "cartine" ))
+// QUARTO ESERCIZIO
+
+const TestPalindromo = (parola) => {
+
+    let parolaLower = parola.toLowerCase()
+    console.log(parolaLower.split(' ').join('').split('').reverse("").join(""))
+    console.log(parolaLower.split(" ").join("").split("").join(""))
+    //.split(' ').join('').split('').reverse("").join("") => con con split(' ').join('') tolgo gli spazi tra le parole 
+                                                //        => con reverse("") inverto e con join("") unisco tutto insieme 
+     if(parolaLower.split(' ').join('').split('').reverse("").join("") === parolaLower.split(" ").join("").split("").join("") ) {
+         return true 
+     } else {
+         return false
+     }
+
+    
+    
+}
