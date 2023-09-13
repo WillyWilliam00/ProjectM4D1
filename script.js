@@ -12,12 +12,15 @@ function somma(a, b) {
 
 function TogliCarattere(stringa, posizione) {
 
-        let ArrayStringa = stringa.split("")
-        let ArrayStringaSenzaCarattere = ArrayStringa.toSpliced(posizione - 1, 1)
+    let ArrayStringaSenzaCarattere = []
 
-        let NuovaStringa = ArrayStringaSenzaCarattere.join("")
+        let ArrayStringa = stringa.split("")
+        ArrayStringa.splice(posizione, 1)
+
+        let NuovaStringa = ArrayStringa.join("")
         return NuovaStringa
 }
+console.log(TogliCarattere("ciao", 0))
 
 // TERZO ESERCIZIO
 
@@ -101,8 +104,18 @@ const Acronimo = (frase) => {
 
 const CaratterePiuUsato = (frase) => {
 
+   let contenitore = {}
+   let count = 0
 
+   for (const lettera of frase) {
+    
+
+    
+    console.log(Frasearray)
 }
+}
+
+
 
 // SECONDO ESERCIZIO
 // USO SORT() LA QUALE METTE IN ORDINE ALFABETICO UN ARRAY, NEL CASO LE DUE PAROLE, 
@@ -145,8 +158,7 @@ const ArrayAnagrammi = (ListaAnagrammi, parola) => {
 const TestPalindromo = (parola) => {
 
     let parolaLower = parola.toLowerCase()
-    console.log(parolaLower.split(' ').join('').split('').reverse("").join(""))
-    console.log(parolaLower.split(" ").join("").split("").join(""))
+    
     //.split(' ').join('').split('').reverse("").join("") => con con split(' ').join('') tolgo gli spazi tra le parole 
                                                 //        => con reverse("") inverto e con join("") unisco tutto insieme 
      if(parolaLower.split(' ').join('').split('').reverse("").join("") === parolaLower.split(" ").join("").split("").join("") ) {
@@ -198,32 +210,20 @@ const Reverse = (str) => {
 
 const SottoArray = (arr, number) => {
     
-    let SottArray = [ ]
+    let SottArray = []
     
-    // if (arr.length === number){
-    //     SottoArray.push(arr)
-    //     return SottoArray
-    // } else if (arr.length < number) {
-    //     return "il numero è più alto della lunghezza dell'array"
-    // }  else if (arr.length > number){
-        for (let i = 0; i < arr.length; i += number) {
-
-
-            const chunk = arr.slice(i, i + number);
-            chunks.push(chunk);
-            
-        }
+   
+    for (let i = 0; i < arr.length; i+= number) {
+        const x = arr.slice(i, i + number);
+        SottArray.push(x);
+    }
+    return SottArray;
+    }
         
         
-    //}
    
-    
-    
-     
-   
-}
 
-console.log(SottoArray([5, 4, 3, 7, 8, 4], 1))
+
 
 // NONO ESERCIZIO
 
@@ -251,3 +251,4 @@ const piramide = (x) => {
 
 }
 
+// DECIMO ESERCIZIO
